@@ -19,7 +19,7 @@ class Application
       if @@cart.length < 1
         resp.write "Your cart is empty"
       else
-        resp.write @@cart
+        resp.write @@cart.join
       end
     elsif req.path.match(/add/)
       item_to_add = req.params["item"]
